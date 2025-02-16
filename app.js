@@ -6,6 +6,7 @@ require('dotenv').config();
 // Import routes
 const userRoutes = require('./routes/userRoutes');
 const courseRoutes = require('./routes/courseRoutes');
+const uploadRoutes = require('./routes/uploadRoutes');
 
 const app = express();
 
@@ -22,6 +23,7 @@ mongoose.connect(process.env.MONGODB_URI)
 // Routes
 app.use('/api/users', userRoutes);
 app.use('/api/courses', courseRoutes);
+app.use('/api', uploadRoutes);
 
 // Home route
 app.get('/', (req, res) => {

@@ -48,4 +48,4 @@ temp/
 *.tgz
 
 # Yarn Integrity file
-.yarn-integrity
+.yarn-integritygit commit -m "first commit"
