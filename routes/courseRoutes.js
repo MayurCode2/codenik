@@ -8,7 +8,7 @@ const auth = require('../middleware/auth');
 router.get('/', courseController.getAllCourses);
 router.get('/search', courseController.searchCourses);
 router.get('/:id', courseController.getCourse);
-router.post('/', auth, courseController.createCourse);
+router.post('/creates', auth, courseController.createCourse);
 router.put('/:id', auth, courseController.updateCourse);
 router.delete('/:id', auth, courseController.deleteCourse);
 
